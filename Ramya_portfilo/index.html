@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/540139e47b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+        <nav>
+            <h1><span>Saladi Ramya</span></h1>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#Portifolio">portfolio</a></li>
+                <li><a href="#contact">contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h3>Hi, I am  <span> Ramya </span><br> From  Andhra,<span>India</span></h3>
+        </div>
+        </div>
+    </div>
+
+    <div id="about">
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="IMG_20230628_154451.jpg" style = "height:500px;width:300px">
+                </div>
+                <div class="about-col-2">
+                    <h2 class="sub-title">About Me</h2>
+                    <p>Dedicated,team-oriented performer and goal-driven individual , eager to contribute my innovative,scalable and experimentation capabilities to the solution of both real world and business problems.<span> As a responsible young graduate, I am committed to advancing every aspect of the world and making its vision a reality - innovation for a better world</span> . A tech enthusiast, who love's to explore advanced and emerging technologies and use them to create an impact.<span> The challenge of solving challenging problems and designing efficient solutions never fails to excite my brain.</span></p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Education">
+                        <ul>
+                            <li><span>2023</span><br>Studying BTech final year in <span>SITE</span>,Tadepalligudem</li>
+                            <li><span>2020</span><br>completed +2 from <span>Aditya junior college</span>,Tadepalligudem </li>
+                            <li><span>2018</span><br>passed 10th from <span>Vani Public School</span>,Tadepalligudem</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>4 projects</span><br>in web Development</li>
+                            <li><span>1 project</span><br>Cloud Computing</li>
+                            <li><span>1 project</span><br>Machine Learning</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                   <h2>web Design</h2>
+                   <p>Build static websites using HTML,CSS 
+                    and Bootstrap,responsive websites using
+                     grid system that remain legible and visually appealing across a variety of devices and interactive applications using Javascript</p>
+                   
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Machine Learning</h2>
+                    <p>can develop strategies for analyzing,and visualizing data,building models with data using programming languages,such as python and R,and deploying models into applications</p>
+                    
+                 </div>
+                 <div>
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2>cloud computing</h2>
+                    <p>very excited to be a part of the domain.Cloud computing is the on-demand availability of computing resources (such as storage and infrastructure), as services over the internet. It eliminates the need for individuals and businesses to self-manage physical resources themselves, and only pay for what they use.</p>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+        <div class="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-envelope "></i> ramyasaladi432@gmail.com</p>
+                        <p><i class="fa-solid fa-phone "></i> 9441650555</p>
+                        <div class="social-icons">
+                            <a href="https://instagram.com/dadzz_weapon?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/saladi-ramya-4b9a9a248"><i class="fab fa-linkedin"></i></a>
+    
+                            <a href="https://github.com/Ramyasaladi13"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <button id="resume" type="submit">
+                            <a href="SALADI   RAMYA   SRI  DURGA-1.pdf"
+                            download="samplecv" 
+                            class="btn btn2">Download Resume</a></button>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="Submit" class="btn btn2">Submit</button>
+
+
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="copyright">
+            <p>Copyright Made with <i class="fa-solid fa-heart"></i> by Ramya  </p>
+        </div>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    
+</body>
+</html>
